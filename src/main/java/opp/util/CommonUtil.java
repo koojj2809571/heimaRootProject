@@ -7,6 +7,10 @@ public class CommonUtil {
     }
 
     public static void printString(Object o){
-        print(o.toString());
+        String result = "";
+        if (o != null){
+            result = o.toString();
+        }
+        print(result);
     }
 }

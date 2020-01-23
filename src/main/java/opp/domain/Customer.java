@@ -15,56 +15,98 @@ public class Customer implements Serializable {
     public long getCus_id() {
         return cus_id;
     }
+    public long getCusId() {
+        return cus_id;
+    }
 
     public void setCus_id(long cus_id) {
+        this.cus_id = cus_id;
+    }
+    public void setCusId(long cus_id) {
         this.cus_id = cus_id;
     }
 
     public String getCus_name() {
         return cus_name;
     }
+    public String getCusName() {
+        return cus_name;
+    }
 
     public void setCus_name(String cus_name) {
+        this.cus_name = cus_name;
+    }
+    public void setCusName(String cus_name) {
         this.cus_name = cus_name;
     }
 
     public String getCus_source() {
         return cus_source;
     }
+    public String getCusSource() {
+        return cus_source;
+    }
 
     public void setCus_source(String cus_source) {
+        this.cus_source = cus_source;
+    }
+    public void setCusSource(String cus_source) {
         this.cus_source = cus_source;
     }
 
     public String getCus_industry() {
         return cus_industry;
     }
+    public String getCusIndustry() {
+        return cus_industry;
+    }
 
     public void setCus_industry(String cus_industry) {
+        this.cus_industry = cus_industry;
+    }
+    public void setCusIndustry(String cus_industry) {
         this.cus_industry = cus_industry;
     }
 
     public String getCus_level() {
         return cus_level;
     }
+    public String getCusLevel() {
+        return cus_level;
+    }
 
     public void setCus_level(String cus_level) {
+        this.cus_level = cus_level;
+    }
+    public void setCusLevel(String cus_level) {
         this.cus_level = cus_level;
     }
 
     public String getCus_address() {
         return cus_address;
     }
+    public String getCusAddress() {
+        return cus_address;
+    }
 
     public void setCus_address(String cus_address) {
+        this.cus_address = cus_address;
+    }
+    public void setCusAddress(String cus_address) {
         this.cus_address = cus_address;
     }
 
     public String getCus_phone() {
         return cus_phone;
     }
+    public String getCusPhone() {
+        return cus_phone;
+    }
 
     public void setCus_phone(String cus_phone) {
+        this.cus_phone = cus_phone;
+    }
+    public void setCusPhone(String cus_phone) {
         this.cus_phone = cus_phone;
     }
 
