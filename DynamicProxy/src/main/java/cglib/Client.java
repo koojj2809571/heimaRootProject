@@ -1,18 +1,15 @@
-package opp;
+package cglib;
 
+import net.sf.cglib.proxy.Enhancer;
+import net.sf.cglib.proxy.MethodInterceptor;
 import opp.util.CommonUtil;
-
-import java.lang.reflect.Proxy;
 
 public class Client {
 
     public static void main(String[] args) {
-        final ActorImpl actor = new ActorImpl();
-
-        Actor proxyActor = (Actor) Proxy.newProxyInstance(
-                actor.getClass().getClassLoader(),
-                actor.getClass().getInterfaces(),
-                (proxy, method, arguments) -> {
+        final Actor actor = new Actor();
+        Actor cdlibActor = (Actor) Enhancer.create(actor.getClass(),
+                (MethodInterceptor) (proxy, method, arguments, methodProxy) -> {
                     Object result = null;
                     float money = (float) arguments[0];
                     if (method.getName().equals("basicAct")) {
@@ -32,8 +29,8 @@ public class Client {
                     return result;
                 }
         );
-        proxyActor.basicAct(20000);
-        proxyActor.dangerAct(60000);
+        cdlibActor.basicAct(20000);
+        cdlibActor.dangerAct(60000);
     }
 
 }
