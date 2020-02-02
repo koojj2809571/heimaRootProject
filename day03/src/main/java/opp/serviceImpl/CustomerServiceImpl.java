@@ -1,10 +1,11 @@
 package opp.serviceImpl;
 
 import opp.dao.CustomerDao;
-import opp.daoImpl.CustomerDaoImpl;
 import opp.domain.Customer;
 import opp.service.CustomerService;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 /**
  * 客户的业务层实现类
@@ -15,9 +16,11 @@ import java.util.List;
  */
 
 /*****此类中我们使用抽取的思想，但是仍然会有很多重复代码*/
+@Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 
-    private CustomerDao customerDao = new CustomerDaoImpl();
+    @Resource(name = "customerDao")
+    private CustomerDao customerDao;
 
     @Override
     public List<Customer> findAllCustomer() {

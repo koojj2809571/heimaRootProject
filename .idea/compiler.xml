@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="DynamicProxy" />
         <module name="day03" />
+        <module name="CustomerConnectorPool" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />
